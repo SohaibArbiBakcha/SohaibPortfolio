@@ -1,13 +1,13 @@
 import React, { Component } from "react"
-import { Link } from "gatsby"
 import Layout from "../components/Layout"
-
+import img from "../images/stillWorking.jpg"
+import styles from "../css/workin.module.css"
 export default class index extends Component {
   render() {
     return (
       <Layout>
-        <h5>Hello World</h5>
-        <Link to="/blog">Go to Blog</Link>
+        <h1 className={styles.center}>Sohaib Arbi Portfolio </h1>
+        <img src={img} alt="facking pic" className={styles.displayed} />
       </Layout>
     )
   }
