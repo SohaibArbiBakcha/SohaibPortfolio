@@ -11,7 +11,6 @@ const Navbar = () => {
   const toggleNav = () => {
     setNav(isOpen => !isOpen)
   }
-  console.log(isOpen)
   return (
     <nav className={styles.nabvar}>
       <div className={styles.navCenter}>
@@ -39,12 +38,7 @@ const Navbar = () => {
         <div className={styles.navSocialLinks}>
           {socialIcon.map((item, index) => {
             return (
-              <a
-                key={index}
-                href={index.url}
-                target="_blank"
-                rel="noreferrer noopner"
-              >
+              <a key={index} href={item.url} target="_blank" rel="noreferrer">
                 {item.icon}
               </a>
             )
