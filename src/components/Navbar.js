@@ -36,6 +36,20 @@ const Navbar = () => {
             )
           })}
         </ul>
+        <div className={styles.navSocialLinks}>
+          {socialIcon.map((item, index) => {
+            return (
+              <a
+                key={index}
+                href={index.url}
+                target="_blank"
+                rel="noreferrer noopner"
+              >
+                {item.icon}
+              </a>
+            )
+          })}
+        </div>
       </div>
     </nav>
   )

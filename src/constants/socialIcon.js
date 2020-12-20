@@ -3,15 +3,15 @@ import { FaFacebook, FaInstagram, FaGithub } from "react-icons/fa"
 
 export default [
   {
+    icon: <FaGithub />,
+    url: "https://github.com/SohaibArbiBakcha",
+  },
+  {
     icon: <FaFacebook />,
-    url: "",
+    url: "https://www.facebook.com/sohaib.spy/",
   },
   {
     icon: <FaInstagram />,
-    url: "",
-  },
-  {
-    icon: <FaGithub />,
-    url: "",
+    url: "https://www.instagram.com/sohaib.arbi/",
   },
 ]
