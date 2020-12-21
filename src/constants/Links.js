@@ -9,7 +9,7 @@ export default [
   },
   {
     path: "/about",
-    name: "About",
+    name: "About us",
   },
   {
     path: "/contact",

@@ -3,7 +3,7 @@ import styles from "../css/navbar.module.css"
 import { Link } from "gatsby"
 import { FaAlignRight } from "react-icons/fa"
 import socialIcon from "../constants/socialIcon"
-import logo from "../images/logo.svg"
+import logo from "../images/logo.png"
 import Links from "../constants/Links"
 
 const Navbar = () => {
