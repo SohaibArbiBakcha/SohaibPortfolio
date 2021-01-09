@@ -1,12 +1,20 @@
 import React, { Component } from "react"
-import img from "../images/404.webp"
-import styles from "../css/workin.module.css"
+import styles from "../css/error.module.css"
+import Layout from "../components/Layout"
+import Banner from "../components/Banner"
+import { Link } from "gatsby"
 export default class error extends Component {
   render() {
     return (
-      <div>
-        <img src={img} className={styles.full} alt="" />
-      </div>
+      <Layout>
+        <header className={styles.error}>
+          <Banner titel="oops it's a dead end">
+            <Link to="/" className="btn-white">
+              back to home page
+            </Link>
+          </Banner>
+        </header>
+      </Layout>
     )
   }
 }

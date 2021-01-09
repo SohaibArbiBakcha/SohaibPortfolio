@@ -14,7 +14,7 @@ export default class index extends Component {
           >
             <Link className="btn-white" to="/project">
               {" "}
-              Go To Project
+              tell me Your idea
             </Link>
           </Banner>
         </SimpleHero>
