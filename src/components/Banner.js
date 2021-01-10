@@ -4,7 +4,7 @@ import Typed from "react-typed"
 const Banner = ({ text, children }) => {
   return (
     <div id="" className={styles.banner}>
-      <h1>Hello, I'm Sohaib Arbi Bakcha</h1>
+      <h1>Hello, I'm Sohaib Bakcha</h1>
       <h2>
         <Typed
           strings={[
