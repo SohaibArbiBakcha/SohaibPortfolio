@@ -8,10 +8,7 @@ export default class index extends Component {
     return (
       <Layout>
         <SimpleHero>
-          <Banner
-            titel="Welcome"
-            text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate."
-          >
+          <Banner text="">
             <Link className="btn-white" to="/project">
               {" "}
               tell me Your idea

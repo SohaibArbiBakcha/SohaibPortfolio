@@ -10,6 +10,13 @@
   padding: 0 1rem;
   letter-spacing: 6px;
 }
+.banner h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  letter-spacing: 3px;
+}
 .banner p {
   width: 85%;
   margin: 0 auto;
