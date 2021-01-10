@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "../css/banner.module.css"
 import Typed from "react-typed"
-const Banner = ({ text, children }) => {
+const Banner = ({ children }) => {
   return (
     <div id="" className={styles.banner}>
       <h1>Hello, I'm Sohaib Bakcha</h1>
@@ -19,7 +19,7 @@ const Banner = ({ text, children }) => {
           loop={true}
         />
       </h2>
-      <p>{text}</p>
+
       {children}
     </div>
   )
