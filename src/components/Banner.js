@@ -1,6 +1,7 @@
 import React from "react"
 import styles from "../css/banner.module.css"
 import Typed from "react-typed"
+
 const Banner = ({ children }) => {
   return (
     <div id="" className={styles.banner}>

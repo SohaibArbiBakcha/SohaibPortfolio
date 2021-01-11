@@ -1,7 +1,7 @@
 export default [
   {
     path: "/",
-    name: "home",
+    name: "Home",
   },
   {
     path: "/project",
@@ -9,7 +9,7 @@ export default [
   },
   {
     path: "/about",
-    name: "About us",
+    name: "About me",
   },
   {
     path: "/contact",

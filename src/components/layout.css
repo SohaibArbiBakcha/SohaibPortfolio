@@ -44,7 +44,7 @@ a {
 }
 .defaultHero {
   min-height: calc(100vh - 62px);
-  background: linear-gradient(rgba(2, 2, 2, 0.9), rgba(0, 0, 0, 0.7));
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(2, 2, 2, 0.9));
 
   /*opacity: 0.1;*/
   display: flex;

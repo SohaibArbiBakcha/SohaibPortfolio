@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import { Link } from "gatsby"
 import SimpleHero from "../components/simpleHero"
 import Banner from "../components/Banner"
+import Particle from "../components/particle"
 export default class index extends Component {
   render() {
     return (
