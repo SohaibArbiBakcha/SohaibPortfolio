@@ -15,7 +15,11 @@ const Navbar = () => {
     <nav className={styles.nabvar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          <img src={logo} alt="Portfolio logo" />
+          <img
+            src={logo}
+            className={styles.scaleincenter}
+            alt="Portfolio logo"
+          />
           <button type="button" className={styles.logoBtn} onClick={toggleNav}>
             <FaAlignRight className={styles.logoIcon} />
           </button>
