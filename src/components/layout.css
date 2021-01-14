@@ -7,6 +7,7 @@
   --mainBlack: #222;
   --mainGrey: #ececec;
   --darkGrey: #afafaf;
+  --turbo: #f5e51b;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 4px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
@@ -44,7 +45,7 @@ a {
 }
 .defaultHero {
   min-height: calc(100vh - 62px);
-  background: linear-gradient(to bottom, #fff 0%, #222 100%);
+  background: linear-gradient(to bottom, #fff 5%, #222 95%);
 
   /*opacity: 0.1;*/
   display: flex;

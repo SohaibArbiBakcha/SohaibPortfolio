@@ -3,7 +3,7 @@ import Layout from "../components/Layout"
 import { Link } from "gatsby"
 import SimpleHero from "../components/simpleHero"
 import Banner from "../components/Banner"
-import Particle from "../components/particle"
+import About from "../components/Home/About"
 export default class index extends Component {
   render() {
     return (
@@ -16,10 +16,7 @@ export default class index extends Component {
             </Link>
           </Banner>
         </SimpleHero>
-
-        {/* <h1 className={styles.center}>Sohaib Arbi Portfolio </h1>
-
-        <img src={img} alt="facking pic" className={styles.displayed} /> */}
+        <About />
       </Layout>
     )
   }
