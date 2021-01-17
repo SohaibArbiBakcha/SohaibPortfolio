@@ -8,7 +8,7 @@ export default class error extends Component {
     return (
       <Layout>
         <header className={styles.error}>
-          <Banner titel="oops it's a dead end">
+          <Banner title="oops it's a dead end">
             <Link to="/" className="btn-white">
               back to home page
             </Link>
