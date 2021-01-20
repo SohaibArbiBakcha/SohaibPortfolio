@@ -16,7 +16,7 @@ const About = ({ className }) => {
         <article className={styles.aboutInfo}>
           <p>
             My name is Sohaib Arbi Bakcha, I have{" "}
-            {new Date().getFullYear() - 1997} Years Old, I live in Morocco
+            {new Date().getFullYear() - 1995} Years Old, I live in Morocco
           </p>
           <p>
             I started learning Programing in 2017, If you wanna know more about

@@ -30,7 +30,7 @@ const Images = () => {
     <Wrapper>
       <article>
         <h3>bacis Img</h3>
-        <img src={img} className="basic" />
+        <img src={img} alt="testing" className="basic" />
       </article>
       <article>
         <h3>fixed Img / blur</h3>
