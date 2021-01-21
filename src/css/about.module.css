@@ -13,21 +13,12 @@
 .about-info {
   margin-top: 3rem;
 }
-.about-img {
-  position: relative;
-}
 
 .about-img img {
   width: 100%;
   display: block;
   box-shadow: var(--lightShadow);
-  transition: transform 0.2s;
-}
-.about-img img:hover {
-  transform: scale(1.05);
-}
-.about-img div {
-  box-shadow: var(--lightShadow);
+  border-radius: 5px;
 }
 .about-info h4 {
   font-size: 1.9rem;
