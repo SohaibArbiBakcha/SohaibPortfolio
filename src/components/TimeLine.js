@@ -18,11 +18,12 @@ const TimeLine = () => {
         <VerticalTimelineElement
           className="vertical-timeline-element--work timeLineElemen"
           contentStyle={{
-            background: "var(--darkGrey)",
-            color: "var(--mainWhite)",
+            background: "#B3B3B3",
+            color: "#000000",
           }}
           contentArrowStyle={{ borderRight: "7px solid  rgb(175, 175, 175)" }}
           date="present"
+          dateClassName="dateColor"
           iconStyle={{ background: "var(--mainBlack)", color: "#fff" }}
           icon={<MdWork />}
         >
@@ -38,9 +39,10 @@ const TimeLine = () => {
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date="2017 - 2020"
+          dateClassName="dateColor"
           contentStyle={{
-            background: "var(--darkGrey)",
-            color: "var(--mainWhite)",
+            background: "#B3B3B3",
+            color: "#000000",
           }}
           contentArrowStyle={{ borderRight: "7px solid  rgb(175, 175, 175)" }}
           iconStyle={{ background: "var(--mainBlack)", color: "#fff" }}
@@ -57,11 +59,12 @@ const TimeLine = () => {
         <VerticalTimelineElement
           className="vertical-timeline-element--work timeLineElemen"
           contentStyle={{
-            background: "var(--darkGrey)",
-            color: "var(--mainWhite)",
+            background: "#B3B3B3",
+            color: "#000000",
           }}
           contentArrowStyle={{ borderRight: "7px solid  rgb(175, 175, 175)" }}
           date="2017"
+          dateClassName="dateColor"
           iconStyle={{ background: "var(--mainBlack)", color: "#fff" }}
           icon={<SiGooglescholar />}
         >
@@ -80,6 +83,12 @@ const TimeLine = () => {
 
 const MyTimeLine = styled.div`
   padding: 2rem;
+
+  @media (min-width: 1170px) {
+    .dateColor {
+      color: white;
+    }
+  }
 `
 
 export default TimeLine
