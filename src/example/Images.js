@@ -29,14 +29,17 @@ const Images = () => {
   return (
     <Wrapper>
       <article>
+        {/* normal */}
         <h3>bacis Img</h3>
         <img src={img} alt="testing" className="basic" />
       </article>
       <article>
+        {/* fluid */}
         <h3>fixed Img / blur</h3>
         <Img fixed={data.fixed.childImageSharp.fixed} />
       </article>
       <article>
+        {/* fixed */}
         <h3>fluid Img / svg</h3>
         <Img fluid={data.fluid.childImageSharp.fluid} />
       </article>

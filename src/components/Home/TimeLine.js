@@ -1,5 +1,4 @@
 import React from "react"
-import { FaSchool } from "react-icons/fa"
 import { MdWork } from "react-icons/md"
 import { SiGooglescholar } from "react-icons/si"
 import {
@@ -8,7 +7,7 @@ import {
 } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
 import styled from "styled-components"
-import Title from "./Title"
+import Title from "../Title"
 
 const TimeLine = () => {
   return (

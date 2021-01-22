@@ -1,9 +1,8 @@
 import React from "react"
 import Title from "../Title"
 import styled from "styled-components"
-import photo from "../../images/profile.jpg"
 import styles from "../../css/about.module.css"
-import TimeLine from "../TimeLine"
+import TimeLine from "./TimeLine"
 import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
 
