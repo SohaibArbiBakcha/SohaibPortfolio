@@ -23,6 +23,7 @@
     "gatsby-transformer-sharp": "^2.11.0",
     "particles.js": "^2.0.0",
     "react": "^16.12.0",
+    "react-animated-3d-card": "^1.0.2",
     "react-dom": "^16.12.0",
     "react-icons": "^4.1.0",
     "react-particles-js": "^3.4.1",
