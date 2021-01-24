@@ -5,7 +5,7 @@ import SimpleHero from "../components/simpleHero"
 import Banner from "../components/Banner"
 import About from "../components/Home/About"
 import Typed from "react-typed"
-import SkillsBar from "../components/Home/SkillsBar"
+import SkillsBarPf from "../components/Home/SkillsBarPf"
 
 export default class index extends Component {
   render() {
@@ -28,14 +28,14 @@ export default class index extends Component {
               />
             }
           >
-            <Link className="btn-white" to="/project">
+            <Link className="btn-white" to="/contact">
               {" "}
               tell me Your idea
             </Link>
           </Banner>
         </SimpleHero>
         <About />
-        <SkillsBar />
+        <SkillsBarPf />
       </Layout>
     )
   }
