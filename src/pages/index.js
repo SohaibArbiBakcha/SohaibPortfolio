@@ -5,6 +5,7 @@ import SimpleHero from "../components/simpleHero"
 import Banner from "../components/Banner"
 import About from "../components/Home/About"
 import Typed from "react-typed"
+import SkillsBar from "../components/Home/SkillsBar"
 
 export default class index extends Component {
   render() {
@@ -34,6 +35,7 @@ export default class index extends Component {
           </Banner>
         </SimpleHero>
         <About />
+        <SkillsBar />
       </Layout>
     )
   }

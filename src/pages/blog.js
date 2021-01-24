@@ -1,9 +1,8 @@
 import React, { Component } from "react"
 import Layout from "../components/Layout"
 import Working from "../components/working"
-// import { graphql } from "gatsby"
 
-class about extends Component {
+class blog extends Component {
   render() {
     console.log(this.props)
     return (
@@ -28,4 +27,4 @@ class about extends Component {
 //   }
 // `
 
-export default about
+export default blog
