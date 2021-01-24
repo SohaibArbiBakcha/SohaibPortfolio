@@ -92,7 +92,7 @@ const SkillsBar = () => {
     <Skill>
       <Title titel="<my" subtitel="Skills/>" />
       <div className="skillContiner">
-        <SkillBar className="skill" skills={skills} />
+        <SkillBar className="skill" skills={skills} animationDelay={500} />
       </div>
     </Skill>
   )
