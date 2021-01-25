@@ -5,6 +5,7 @@ import styles from "../../css/about.module.css"
 import TimeLine from "./TimeLine"
 import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
+// import SkillsBar from "./skills-BarPf"
 
 const myQuery = graphql`
   {
@@ -40,6 +41,7 @@ const About = ({ className }) => {
         </article>
       </div>
       <TimeLine />
+      {/* <SkillsBar /> */}
     </section>
   )
 }
