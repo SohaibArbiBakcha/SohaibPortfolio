@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 import styles from "../css/navbar.module.css"
-import { Link } from "gatsby"
 import { FaAlignRight } from "react-icons/fa"
 import socialIcon from "../constants/socialIcon"
 import logo from "../images/logo.png"
 import Links from "../constants/Links"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Navbar = () => {
   const [isOpen, setNav] = useState(false)
@@ -34,7 +34,9 @@ const Navbar = () => {
           {Links.map((item, index) => {
             return (
               <li key={index}>
-                <Link to={item.path}>{item.name}</Link>
+                <AniLink swipe to={item.path}>
+                  {item.name}
+                </AniLink>
               </li>
             )
           })}

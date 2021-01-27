@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import styles from "../css/footer.module.css"
 import links from "../constants/Links"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import socialIcon from "../constants/socialIcon"
 
 export default class Footer extends Component {
@@ -10,9 +10,9 @@ export default class Footer extends Component {
       <footer className={styles.footer}>
         <div className={styles.links}>
           {links.map((item, index) => (
-            <Link to={item.path} key={index}>
+            <AniLink swipe to={item.path} key={index}>
               {item.name}
-            </Link>
+            </AniLink>
           ))}
         </div>
         <div className={styles.icons}>

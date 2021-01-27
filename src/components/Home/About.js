@@ -24,7 +24,7 @@ const About = ({ className }) => {
     <section className={styles.about}>
       <Title titel="<About" subtitel="Me/>" />
       <div className={styles.aboutCenter}>
-        <article cle className={styles.aboutImg}>
+        <article className={styles.aboutImg}>
           <div className={styles.imgContainer}>
             <Img fluid={data.fluid.childImageSharp.fluid} />
           </div>
