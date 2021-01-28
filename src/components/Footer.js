@@ -23,8 +23,8 @@ export default class Footer extends Component {
           ))}
         </div>
         <div className={styles.copyright}>
-          copyright &copy; <b>KaizokuGari Group</b> {new Date().getFullYear()}{" "}
-          all right reserved
+          copyright &copy; <b> BeenAir </b> {new Date().getFullYear()} all right
+          reserved
         </div>
       </footer>
     )
