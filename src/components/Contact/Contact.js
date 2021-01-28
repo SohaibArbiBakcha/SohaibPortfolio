@@ -7,8 +7,13 @@ const Contact = () => {
     <section className={styles.contact}>
       <Title titel="<Contact" subtitel="Me />" />
       <div className={styles.center}>
-        <form className={styles.form}>
+        <form
+          action="https://submit-form.com/jhunDdQi"
+          target="_self"
+          className={styles.form}
+        >
           <div>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               name="name"
@@ -18,6 +23,7 @@ const Contact = () => {
             />
           </div>
           <div>
+            <label htmlFor="email">Email</label>
             <input
               type="email"
               name="email"
@@ -27,9 +33,10 @@ const Contact = () => {
             />
           </div>
           <div>
+            <label htmlFor="m essage">Message</label>
             <textarea
-              name="massege"
-              id="massage"
+              name="messege"
+              id="message"
               rows="10"
               className={styles.formControl}
               placeholder="hello there"
@@ -39,7 +46,7 @@ const Contact = () => {
             <input
               type="submit"
               value="submit here"
-              className={styles.formControl}
+              className={styles.submit}
             />
           </div>
         </form>
