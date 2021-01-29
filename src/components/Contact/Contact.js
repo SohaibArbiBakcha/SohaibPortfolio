@@ -7,11 +7,13 @@ const Contact = () => {
     <section className={styles.contact}>
       <Title titel="<Contact" subtitel="Me />" />
       <div className={styles.center}>
-        <form
-          action="https://submit-form.com/jhunDdQi"
-          target="_self"
-          className={styles.form}
-        >
+        <p>
+          " Whether you want to get in touch, talk about a project
+          collaboration, or just say hi,
+          <br /> I'd love to hear from you.
+          <br /> Simply fill the form and send me an email "
+        </p>
+        <form className={styles.form} name="Contact" netlify>
           <div>
             <label htmlFor="name">Name</label>
             <input

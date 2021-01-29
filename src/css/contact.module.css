@@ -7,6 +7,13 @@
   width: 80vw;
   margin: 0 auto;
 }
+.contact p {
+  font-size: 1.2rem;
+  font-family: "Times New Roman", "Ancient Runes", serif;
+  font-style: italic;
+  text-align: center;
+}
+
 @media screen and (min-width: 992px) {
   .center {
     width: 50vw;
