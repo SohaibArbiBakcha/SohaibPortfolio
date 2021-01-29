@@ -8,10 +8,10 @@ const Contact = () => {
       <Title titel="<Contact" subtitel="Me />" />
       <div className={styles.center}>
         <p>
-          " Whether you want to get in touch, talk about a project
+          &ldquo; Whether you want to get in touch, talk about a project
           collaboration, or just say hi,
           <br /> I'd love to hear from you.
-          <br /> Simply fill the form and send me an email "
+          <br /> Simply fill the form and send me an email &bdquo;
         </p>
         <form
           action="https://submit-form.com/jhunDdQi"
