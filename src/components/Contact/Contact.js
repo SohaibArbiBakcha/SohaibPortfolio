@@ -14,10 +14,9 @@ const Contact = () => {
           <br /> Simply fill the form and send me an email "
         </p>
         <form
+          action="https://submit-form.com/jhunDdQi"
+          target="_self"
           className={styles.form}
-          name="Contact"
-          method="POST"
-          data-netlify="true"
         >
           <div>
             <label htmlFor="name">Name</label>
