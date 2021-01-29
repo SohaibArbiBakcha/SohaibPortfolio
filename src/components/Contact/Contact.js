@@ -13,7 +13,12 @@ const Contact = () => {
           <br /> I'd love to hear from you.
           <br /> Simply fill the form and send me an email "
         </p>
-        <form className={styles.form} name="Contact" netlify>
+        <form
+          className={styles.form}
+          name="Contact"
+          method="POST"
+          data-netlify="true"
+        >
           <div>
             <label htmlFor="name">Name</label>
             <input
