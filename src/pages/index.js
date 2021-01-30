@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import Layout from "../components/Layout"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import SimpleHero from "../components/simpleHero"
 import Banner from "../components/Banner"
 import About from "../components/Home/About"
@@ -27,10 +27,10 @@ export default class index extends Component {
               />
             }
           >
-            <Link className="btn-white" to="/contact">
+            <AniLink swipe className="btn-white" to="/contact">
               {" "}
               tell me Your idea
-            </Link>
+            </AniLink>
           </Banner>
         </SimpleHero>
         <About />
