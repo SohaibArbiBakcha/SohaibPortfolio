@@ -11,7 +11,7 @@ const FeatruedProject = () => {
 
   return (
     <section className={styles.projects}>
-      <Title titel="<featrued" subtitel="projects/>" />
+      <Title titel="<featured" subtitel="projects/>" />
       <div className={styles.center}>
         {projects.map(({ node }) => {
           return <Project key={node.contentful_id} project={node} />
