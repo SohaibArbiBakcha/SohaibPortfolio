@@ -1,5 +1,11 @@
 .error {
-  background: var(--primaryColor);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 34, 34, 1) 0%,
+    rgba(34, 34, 34, 0.9) 20%,
+    rgba(96, 96, 96, 0.5) 52%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
   min-height: calc(100vh - 62px);
   display: flex;
   justify-content: center;
