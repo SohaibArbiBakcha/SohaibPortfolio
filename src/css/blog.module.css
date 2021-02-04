@@ -1,5 +1,7 @@
 .blog {
   padding: 4rem 0;
+  background-color: var(--mainBlack);
+  color: var(--mainWhite);
 }
 .center {
   width: 80vw;

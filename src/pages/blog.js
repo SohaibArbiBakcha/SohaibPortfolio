@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
+import BlogList from "../components/Blog/BlogList"
 
 class blog extends Component {
   render() {
@@ -12,6 +13,7 @@ class blog extends Component {
           <StyledHero img={this.props.data.defaultBcg.childImageSharp.fluid} />
 
           {/* <h1>title : {this.props.data.site.siteMetadata.title}</h1> */}
+          <BlogList />
         </Layout>
       </div>
     )
