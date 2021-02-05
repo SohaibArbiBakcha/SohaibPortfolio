@@ -2,10 +2,10 @@
   padding: 4rem 0;
   background: linear-gradient(
     0deg,
-    rgba(34, 34, 34, 1) 4%,
-    rgba(34, 34, 34, 0.9) 20%,
-    rgba(96, 96, 96, 0.5) 52%,
-    rgba(255, 255, 255, 0.2) 100%
+    rgba(34, 34, 34, 1) 0.1%,
+    rgba(34, 34, 34, 0.7) 5%,
+    rgba(96, 96, 96, 0.5) 25%,
+    rgba(255, 255, 255, 0.2) 70%
   );
 }
 .center {
@@ -19,6 +19,22 @@
 .post {
   margin: 2rem 0;
 }
-.post img {
+.post .img {
   max-width: 70vw;
+}
+.img-container {
+  margin: 2rem;
+  transition: var(--mainTransition);
+}
+.img {
+  transition: var(--mainTransition);
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .img {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
