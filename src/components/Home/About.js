@@ -31,7 +31,7 @@ const About = ({ className }) => {
         </article>
         <article className={styles.aboutInfo}>
           <p>
-            Sohaib Arbi Bakcha is a junior Developer, he has{" "}
+            Sohaib Arbi Bakcha is a junior Developer, he is{" "}
             {new Date().getFullYear() - 1995} Years Old, He lives in Morocco
           </p>
           <p>

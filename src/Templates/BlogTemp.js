@@ -5,17 +5,38 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Image from "gatsby-image"
+import BlogCard from "../components/Blog/BlogCard"
 
 const BlogTemp = ({ data }) => {
   const { title, published, text } = data.post
-  const images = text.references
+
+  const images = text.references.filter(image => (image.fluid ? image : null))
+  const posts = text.references.filter(post => (post.slug ? post : null))
+
   const options = {
     renderNode: {
-      "embedded-asset-block": node => {
+      "embedded-asset-block": () => {
+        //console.log(index)
         return (
           <div className={styles.imgContainer}>
-            <Image fluid={images[0].fluid} className={styles.img} alt={title} />
+            <Image
+              fluid={images[0].fluid}
+              className={styles.imgg}
+              alt={title}
+            />
           </div>
+        )
+      },
+      "embedded-entry-block": () => {
+        return (
+          <section className={styles.blogCard}>
+            <h1>this is other posts :</h1>
+            <div className={styles.blogCenter}>
+              {posts.map(post => {
+                return <BlogCard key={text.references.id} blog={post} />
+              })}
+            </div>
+          </section>
         )
       },
     },
@@ -49,6 +70,17 @@ export const query = graphql`
             fluid {
               ...GatsbyContentfulFluid_tracedSVG
             }
+          }
+          ... on ContentfulPost {
+            id: contentful_id
+            slug
+            title
+            image {
+              fluid {
+                ...GatsbyContentfulFluid_tracedSVG
+              }
+            }
+            published(formatString: "MMMM Do , YYYY")
           }
         }
       }

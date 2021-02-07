@@ -30,9 +30,19 @@
   transition: var(--mainTransition);
   width: 100%;
 }
-
+.blogCard {
+  padding: 4rem 0;
+}
+.blogCenter {
+  width: 80vw;
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
 @media only screen and (min-width: 1024px) {
-  .img {
+  .imgg {
     width: 800px;
     margin-left: auto;
     margin-right: auto;

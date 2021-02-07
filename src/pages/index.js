@@ -30,7 +30,7 @@ export default class index extends Component {
           >
             <AniLink swipe className="btn-white" to="/contact">
               {" "}
-              tell me Your idea
+              tell me Your ideas
             </AniLink>
           </Banner>
         </SimpleHero>
