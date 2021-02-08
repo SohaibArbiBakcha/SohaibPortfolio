@@ -27,18 +27,18 @@ const BlogTemp = ({ data }) => {
           </div>
         )
       },
-      "embedded-entry-block": () => {
-        return (
-          <section className={styles.blogCard}>
-            <h1>this is other posts :</h1>
-            <div className={styles.blogCenter}>
-              {posts.map(post => {
-                return <BlogCard key={text.references.id} blog={post} />
-              })}
-            </div>
-          </section>
-        )
-      },
+      // "embedded-entry-block": () => {
+      //   return (
+      //     <section className={styles.blogCard}>
+      //       <h1>this is other posts :</h1>
+      //       <div className={styles.blogCenter}>
+      //         {posts.map(post => {
+      //           return <BlogCard key={text.references.id} blog={post} />
+      //         })}
+      //       </div>
+      //     </section>
+      //   )
+      // },
     },
   }
 
@@ -60,17 +60,10 @@ const BlogTemp = ({ data }) => {
 
 export const query = graphql`
   query getPost($slug: String) {
-    post: contentfulPost(slug: { eq: $slug }) {
-      title
-      published(formatString: "MMMM Do , YYYY")
+    posts: contentfulPost(slug: { eq: $slug }) {
       text {
         raw
         references {
-          ... on ContentfulAsset {
-            fluid {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
           ... on ContentfulPost {
             id: contentful_id
             slug
@@ -81,6 +74,20 @@ export const query = graphql`
               }
             }
             published(formatString: "MMMM Do , YYYY")
+          }
+        }
+      }
+    }
+    post: contentfulPost(slug: { eq: $slug }) {
+      title
+      published(formatString: "MMMM Do , YYYY")
+      text {
+        raw
+        references {
+          ... on ContentfulAsset {
+            fluid {
+              ...GatsbyContentfulFluid_tracedSVG
+            }
           }
         }
       }
