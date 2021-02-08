@@ -1,0 +1,4 @@
+[context.deploy-preview.environment]
+    CONTENTFUL_SPACE_ID="58ro2x7srquj"
+    CONTENTFUL_ACCESS_TOKEN="xy0kICxbxX0FMhlOTnCl6WKNOgf7OkQqE1xmpQP16xA"
+    GOOGLE_ANALYTICS_TRACKING_ID=G-"WLYCQSGY7S"

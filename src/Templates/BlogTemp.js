@@ -8,6 +8,7 @@ import Image from "gatsby-image"
 import BlogCard from "../components/Blog/BlogCard"
 
 const BlogTemp = ({ data }) => {
+  console.log(data)
   const { title, published, text } = data.post
 
   const images = text.references.filter(image => (image.fluid ? image : null))
@@ -60,24 +61,24 @@ const BlogTemp = ({ data }) => {
 
 export const query = graphql`
   query getPost($slug: String) {
-    posts: contentfulPost(slug: { eq: $slug }) {
-      text {
-        raw
-        references {
-          ... on ContentfulPost {
-            id: contentful_id
-            slug
-            title
-            image {
-              fluid {
-                ...GatsbyContentfulFluid_tracedSVG
-              }
-            }
-            published(formatString: "MMMM Do , YYYY")
-          }
-        }
-      }
-    }
+    #posts: contentfulPost(slug: { eq: $slug }) {
+    #  text {
+    #    raw
+    #    references {
+    #      ... on ContentfulPost {
+    #        id: contentful_id
+    #        slug
+    #        title
+    #        image {
+    #          fluid {
+    #            ...GatsbyContentfulFluid_tracedSVG
+    #          }
+    #        }
+    #        published(formatString: "MMMM Do , YYYY")
+    #      }
+    #    }
+    #  }
+    #}
     post: contentfulPost(slug: { eq: $slug }) {
       title
       published(formatString: "MMMM Do , YYYY")
