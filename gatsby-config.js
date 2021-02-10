@@ -11,8 +11,11 @@ module.exports = {
   siteMetadata: {
     title: "Sohaib protfolio",
     description:
-      "this site build by me, my name is sohaib arbi bakcha, iam a web developer",
-    author: "@sohaib.arbi",
+      "this site built by me, my name is sohaib arbi bakcha, i'm a web developer",
+    author: "@SohaibArbiBakcha",
+    twitterUsername: "@sohaibelarabiba",
+    image: "/profile.jpg",
+    site: "https://www.sohaibportfolio.gq",
   },
   plugins: [
     {
@@ -35,5 +38,6 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-playground`,
+    `gatsby-plugin-react-helmet`,
   ],
 }
