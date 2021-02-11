@@ -11,7 +11,7 @@ module.exports = {
   siteMetadata: {
     title: "Sohaib portfolio",
     description: `
-            Sohaib Arbi Bakcha is a junior Developer, he has{" "}
+            Sohaib Arbi Bakcha is a junior Developer, he has
             ${new Date().getFullYear() - 1995} Years Old, He lives in Morocco.
             He Start IT development in 2017 and now trying to develop his skills
             by self-learning and freelancing
