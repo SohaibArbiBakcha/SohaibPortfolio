@@ -43,5 +43,14 @@ module.exports = {
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-playground`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.sohaibportfolio.gq",
+        sitemap: "https://www.sohaibportfolio.gq/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
   ],
 }
