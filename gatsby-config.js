@@ -9,12 +9,12 @@ require("dotenv").config({
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Sohaib protfolio",
+    title: "Sohaib portfolio",
     description:
       "this site built by me, my name is sohaib arbi bakcha, i'm a web developer",
     author: "@SohaibArbiBakcha",
     twitterUsername: "@sohaibelarabiba",
-    image: "profile.jpg",
+    image: "/profile.jpg",
     siteUrl: "https://www.sohaibportfolio.gq",
   },
   plugins: [
