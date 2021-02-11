@@ -3,19 +3,18 @@ import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
 import BlogList from "../components/Blog/BlogList"
+import SEO from "../components/SEO"
 
 class blog extends Component {
   render() {
-    console.log(this.props)
     return (
-      <div>
-        <Layout>
-          <StyledHero img={this.props.data.defaultBcg.childImageSharp.fluid} />
+      <Layout>
+        <SEO title="Blog" />
+        <StyledHero img={this.props.data.defaultBcg.childImageSharp.fluid} />
 
-          {/* <h1>title : {this.props.data.site.siteMetadata.title}</h1> */}
-          <BlogList />
-        </Layout>
-      </div>
+        {/* <h1>title : {this.props.data.site.siteMetadata.title}</h1> */}
+        <BlogList />
+      </Layout>
     )
   }
 }

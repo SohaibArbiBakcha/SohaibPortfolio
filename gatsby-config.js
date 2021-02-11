@@ -10,8 +10,12 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: "Sohaib portfolio",
-    description:
-      "this site built by me, my name is sohaib arbi bakcha, i'm a web developer",
+    description: `
+            Sohaib Arbi Bakcha is a junior Developer, he has{" "}
+            ${new Date().getFullYear() - 1995} Years Old, He lives in Morocco.
+            He Start IT development in 2017 and now trying to develop his skills
+            by self-learning and freelancing
+          `,
     author: "@SohaibArbiBakcha",
     twitterUsername: "@sohaibelarabiba",
     image: "/profile.jpg",

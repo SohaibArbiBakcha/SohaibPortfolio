@@ -5,6 +5,7 @@ import StyledHero from "../components/StyledHero"
 import styles from "../css/template.module.css"
 import Img from "gatsby-image"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import SEO from "../components/SEO"
 
 const ProjectTemp = ({ data }) => {
   const {
@@ -17,6 +18,7 @@ const ProjectTemp = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={projectName} />
       <StyledHero img={mainImage.fluid} />
       <section className={styles.template}>
         <div className={styles.center}>

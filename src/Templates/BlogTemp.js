@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Image from "gatsby-image"
+import SEO from "../components/SEO"
 
 const BlogTemp = ({ data }) => {
   const { title, published, text } = data.post
@@ -23,6 +24,7 @@ const BlogTemp = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={title} />
       <section className={styles.blog}>
         <div className={styles.center}>
           <h1>{title}</h1>
