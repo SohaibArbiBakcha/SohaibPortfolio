@@ -14,8 +14,8 @@ module.exports = {
       "this site built by me, my name is sohaib arbi bakcha, i'm a web developer",
     author: "@SohaibArbiBakcha",
     twitterUsername: "@sohaibelarabiba",
-    image: "/profile.jpg",
-    site: "https://www.sohaibportfolio.gq",
+    image: "profile.jpg",
+    siteUrl: "https://www.sohaibportfolio.gq",
   },
   plugins: [
     {

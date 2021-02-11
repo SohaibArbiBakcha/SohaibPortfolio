@@ -6,11 +6,13 @@ import Banner from "../components/Banner"
 import About from "../components/Home/About"
 import Typed from "react-typed"
 import FeatruedProject from "../components/Home/featruedProject"
+import SEO from "../components/SEO"
 
 export default class index extends Component {
   render() {
     return (
       <Layout>
+        <SEO title="Home" />
         <SimpleHero>
           <Banner
             title="Hello,I'm Sohaib Arbi Bakcha"
