@@ -3,6 +3,16 @@
   background-color: var(--mainBlack);
   color: white;
 }
+.about-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.about-btn a {
+  margin: auto;
+}
 .about-center {
   width: 80vw;
   margin: 0 auto;

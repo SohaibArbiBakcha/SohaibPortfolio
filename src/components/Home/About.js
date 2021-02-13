@@ -40,6 +40,15 @@ const About = ({ className }) => {
           </p>
         </article>
       </div>
+      <div className={styles.aboutBtn}>
+        <a
+          href="../../../static/Sohaib-Bakcha-CV.pdf"
+          download="Sohaib-Arbi-Bakcha-CV"
+          className="btn-primary"
+        >
+          More ...
+        </a>
+      </div>
       <TimeLine />
       {/* <SkillsBar /> */}
     </section>
