@@ -46,7 +46,7 @@ const About = ({ className }) => {
           download="Sohaib-Arbi-Bakcha-CV"
           className="btn-primary"
         >
-          More ...
+          My resume
         </a>
       </div>
       <TimeLine />
