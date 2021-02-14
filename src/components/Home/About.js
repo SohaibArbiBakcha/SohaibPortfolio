@@ -38,17 +38,17 @@ const About = ({ className }) => {
             He Start IT development in 2017 and now trying to develop his skills
             by self-learning and freelancing
           </p>
+
+          <a
+            href="../../../static/Sohaib-Bakcha-CV.pdf"
+            download="Sohaib-Arbi-Bakcha-CV"
+            className="btn-primary"
+          >
+            My resume
+          </a>
         </article>
       </div>
-      <div className={styles.aboutBtn}>
-        <a
-          href="../../../static/Sohaib-Bakcha-CV.pdf"
-          download="Sohaib-Arbi-Bakcha-CV"
-          className="btn-primary"
-        >
-          My resume
-        </a>
-      </div>
+
       <TimeLine />
       {/* <SkillsBar /> */}
     </section>
