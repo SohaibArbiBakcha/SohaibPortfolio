@@ -19,8 +19,8 @@ module.exports = {
           `,
     author: "@SohaibArbiBakcha",
     twitterUsername: "@sohaibelarabiba",
-    image: "/profile.jpg",
-    siteUrl: "https://www.sohaibportfolio.gq",
+    image: "profile.jpg",
+    siteUrl: "https://www.sohaibportfolio.gq/",
   },
   plugins: [
     {

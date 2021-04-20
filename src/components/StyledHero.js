@@ -24,7 +24,6 @@ export default styled(StyledHero)`
     props.home ? "linear-gradient(rgba() rgba())" : "none"};
   filter: grayscale(100%); */
   background-position: center;
-
   background-size: cover;
   opacity: 1 !important;
   display: flex;
