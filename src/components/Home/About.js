@@ -41,7 +41,7 @@ const About = ({ className }) => {
 
           <a
             href="../../../static/Sohaib-Bakcha-CV.pdf"
-            download="Sohaib-Arbi-Bakcha-CV"
+            download
             className="btn-primary"
           >
             My resume
