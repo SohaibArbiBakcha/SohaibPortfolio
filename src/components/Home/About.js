@@ -40,7 +40,7 @@ const About = ({ className }) => {
           </p>
 
           <a
-            href="../../../static/Sohaib-Bakcha-CV.pdf"
+            href="../../../static/Sohaib-Bakcha-CV_compressed.pdf"
             download
             className="btn-primary"
           >
