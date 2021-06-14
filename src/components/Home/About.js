@@ -40,8 +40,9 @@ const About = ({ className }) => {
           </p>
 
           <a
-            href="../../../static/Sohaib-Bakcha-CV_compressed.pdf"
-            download
+            href="https://drive.google.com/file/d/1VLtlwldv5FAwUD19Qf0q9miXhuZ7_oGW/view"
+            
+            target="_blank"
             className="btn-primary"
           >
             My resume
