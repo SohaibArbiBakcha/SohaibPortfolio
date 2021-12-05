@@ -40,10 +40,11 @@ const About = ({ className }) => {
           </p>
 
           <a
-            href="https://drive.google.com/file/d/1VLtlwldv5FAwUD19Qf0q9miXhuZ7_oGW/view"
-            
-            target="_blank"
+            // href="https://drive.google.com/file/d/1VLtlwldv5FAwUD19Qf0q9miXhuZ7_oGW/view"
+            href="Sohaib_Bakcha_CV.pdf"
             className="btn-primary"
+            target="_blank"
+            rel="noreferrer"
           >
             My resume
           </a>
