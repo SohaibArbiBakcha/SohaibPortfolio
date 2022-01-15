@@ -41,7 +41,7 @@ const About = ({ className }) => {
 
           <a
             // href="https://drive.google.com/file/d/1VLtlwldv5FAwUD19Qf0q9miXhuZ7_oGW/view"
-            href="Sohaib_Bakcha_CV.pdf"
+            href="SohaibArbiBakcha_CV.pdf"
             className="btn-primary"
             target="_blank"
             rel="noreferrer"
