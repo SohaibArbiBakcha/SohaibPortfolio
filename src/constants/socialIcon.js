@@ -1,5 +1,5 @@
 import React from "react"
-import { FaFacebook, FaInstagram, FaGithub } from "react-icons/fa"
+import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa"
 
 export default [
   {
@@ -7,8 +7,8 @@ export default [
     url: "https://github.com/SohaibArbiBakcha",
   },
   {
-    icon: <FaFacebook />,
-    url: "https://www.facebook.com/sohaib.spy/",
+    icon: <FaLinkedin />,
+    url: "https://www.linkedin.com/in/sohaibarbibakcha",
   },
   {
     icon: <FaInstagram />,
