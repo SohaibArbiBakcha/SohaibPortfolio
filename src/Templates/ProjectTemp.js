@@ -1,12 +1,11 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
-import StyledHero from "../components/StyledHero"
 import styles from "../css/template.module.css"
-import Img from "gatsby-image"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import SEO from "../components/SEO"
 
+// Contentful project template — replaced by GithubRepoTemp but kept for schema compat
 const ProjectTemp = ({ data }) => {
   const {
     projectName,
@@ -14,18 +13,19 @@ const ProjectTemp = ({ data }) => {
     projectImages,
   } = data.project
 
-  const [mainImage, ...Images] = projectImages
-
   return (
     <Layout>
       <SEO title={projectName} />
-      <StyledHero img={mainImage.fluid} />
       <section className={styles.template}>
         <div className={styles.center}>
           <div className={styles.images}>
-            {Images.map((item, index) => {
-              return <Img key={index} fluid={item.fluid} />
-            })}
+            {projectImages.map((item, index) => (
+              <img
+                key={index}
+                src={item.file && item.file.url ? `https:${item.file.url}` : ""}
+                alt={projectName}
+              />
+            ))}
           </div>
           <h2>{projectName}</h2>
           <p className={styles.desc}>{description}</p>
@@ -52,8 +52,8 @@ export const query = graphql`
         description
       }
       projectImages {
-        fluid {
-          ...GatsbyContentfulFluid
+        file {
+          url
         }
       }
     }
