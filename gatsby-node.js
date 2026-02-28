@@ -5,6 +5,15 @@ const crypto = require("crypto")
 
 require("events").EventEmitter.defaultMaxListeners = 30
 
+// Fix for Node 18+ OpenSSL 3.0: md4 is no longer available, use sha256
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    output: {
+      hashFunction: "sha256",
+    },
+  })
+}
+
 // ── Schema definitions ────────────────────────────────────────────────────────
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
