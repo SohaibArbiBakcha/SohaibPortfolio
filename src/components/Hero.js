@@ -1,6 +1,7 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import Typed from "react-typed"
 import Particles from "react-particles-js"
 import socialIcon from "../constants/socialIcon"
 
@@ -71,32 +72,30 @@ const Name = styled.h1`
 
 const RoleWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.6rem 1.2rem;
+  gap: 0.85rem;
   margin-bottom: 1.75rem;
+  opacity: 0;
+  animation: ${fadeUp} 0.6s ease 0.8s forwards;
 `
 
-const RoleChip = styled.span`
-  font-size: clamp(0.78rem, 2vw, 0.95rem);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #bbb;
-  opacity: 0;
-  animation: ${fadeUp} 0.6s ease ${props => props.delay || "0.8s"} forwards;
+const Terminal = styled.div`
+  font-family: "Fira Code", "Courier New", monospace;
+  font-size: clamp(0.9rem, 2.5vw, 1.15rem);
+  color: #ccc;
+  letter-spacing: 1px;
 
-  strong {
+  .prompt {
     color: var(--turbo);
-    font-weight: 600;
+    margin-right: 0.5rem;
+    user-select: none;
   }
-`
 
-const RoleSep = styled.span`
-  color: rgba(245, 229, 27, 0.3);
-  font-size: 1.2rem;
-  opacity: 0;
-  animation: ${fadeUp} 0.6s ease 1s forwards;
+  .typed-cursor {
+    color: var(--turbo);
+    font-weight: 300;
+  }
 `
 
 const OpenBadge = styled.span`
@@ -112,8 +111,6 @@ const OpenBadge = styled.span`
   padding: 0.22rem 0.65rem;
   border-radius: 999px;
   font-family: "Fira Code", monospace;
-  opacity: 0;
-  animation: ${fadeUp} 0.6s ease 1.15s forwards;
 
   &::before {
     content: "";
@@ -247,13 +244,21 @@ const Hero = () => (
       <Greeting>Hello, I&apos;m</Greeting>
       <Name>Sohaib Arbi Bakcha</Name>
       <RoleWrapper>
-        <RoleChip delay="0.8s">
-          <strong>Backend</strong> Developer
-        </RoleChip>
-        <RoleSep>/</RoleSep>
-        <RoleChip delay="0.95s">
-          <strong>Frontend</strong> Developer
-        </RoleChip>
+        <Terminal>
+          <span className="prompt">{">"}</span>
+          <Typed
+            strings={[
+              "Full-Stack Developer",
+              "ERP Solutions Architect",
+              "IoT Engineer",
+              "Machine Learning Engineer",
+            ]}
+            typeSpeed={55}
+            backSpeed={35}
+            backDelay={2200}
+            loop
+          />
+        </Terminal>
         <OpenBadge>Open to Work</OpenBadge>
       </RoleWrapper>
       <Divider />
