@@ -97,3 +97,18 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-hello-world)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+## Environment variables
+
+This project reads secrets from environment variables via `dotenv` in `gatsby-config.js`.
+
+- For local development Gatsby will load `.env.development` (set `NODE_ENV=development`).
+- For production builds Gatsby will load `.env.production` (set `NODE_ENV=production`).
+
+The build requires the following variables (set these in Netlify/Vercel or create local `.env.*` files):
+
+- `CONTENTFUL_SPACE_ID` — Contentful space id (example: `58ro2x7srquj`)
+- `CONTENTFUL_ACCESS_TOKEN` — Contentful CDA access token
+- `GOOGLE_ANALYTICS_TRACKING_ID` — (optional) Google Analytics tracking id
+
+To help, there's a `.env.example` file with placeholder keys. Copy it to `.env.development` for local testing and fill in real values. Do NOT commit `.env.development` or `.env.production` — they are ignored by `.gitignore`.

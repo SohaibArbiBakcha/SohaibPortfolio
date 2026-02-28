@@ -5,7 +5,6 @@ import styles from "../../css/about.module.css"
 import TimeLine from "./TimeLine"
 import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
-// import SkillsBar from "./skills-BarPf"
 
 const myQuery = graphql`
   {
@@ -18,6 +17,26 @@ const myQuery = graphql`
     }
   }
 `
+
+const skills = [
+  "React",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "Odoo",
+  "Sage ERP",
+  "Python",
+  "JavaScript",
+  "Raspberry Pi",
+  "ESP32",
+  "IoT",
+  "Traccar",
+  "PowerShell",
+  "HTML5 / CSS3",
+  "Bootstrap",
+  "SASS",
+]
+
 const About = ({ className }) => {
   const data = useStaticQuery(myQuery)
   return (
@@ -30,29 +49,38 @@ const About = ({ className }) => {
           </div>
         </article>
         <article className={styles.aboutInfo}>
-          <p>
-            Sohaib Arbi Bakcha is a junior Developer, he has{" "}
-            {new Date().getFullYear() - 1995} Years Old, He lives in Morocco
+          <h3 className={styles.role}>
+            Full-Stack Developer &amp; ERP Solutions Architect
+          </h3>
+          <p className={styles.company}>
+            📍 Morocco &nbsp;·&nbsp; ATNER (ATLAS ENERGIE)
           </p>
-          <p>
-            He Start IT development in 2017 and now trying to develop his skills
-            by self-learning and freelancing
+          <p className={styles.bio}>
+            I specialize in building robust enterprise solutions that bridge
+            modern web technologies with traditional ERP systems. Currently
+            developing cutting-edge MERN stack applications while managing and
+            customizing Odoo &amp; Sage ERP platforms — including IoT
+            integrations, GPS tracking systems, facial recognition access
+            control, and automated PowerShell workflows.
           </p>
-
+          <div className={styles.skillsGrid}>
+            {skills.map((s, i) => (
+              <span key={i} className={styles.skill}>
+                {s}
+              </span>
+            ))}
+          </div>
           <a
-            // href="https://drive.google.com/file/d/1VLtlwldv5FAwUD19Qf0q9miXhuZ7_oGW/view"
             href="SohaibArbiBakcha_CV.pdf"
             className="btn-primary"
             target="_blank"
             rel="noreferrer"
           >
-            My resume
+            My Resume
           </a>
         </article>
       </div>
-
       <TimeLine />
-      {/* <SkillsBar /> */}
     </section>
   )
 }

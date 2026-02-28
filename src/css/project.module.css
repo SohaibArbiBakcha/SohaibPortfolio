@@ -1,21 +1,32 @@
 .project {
-  box-shadow: var(--lightShadow);
-  transition: var(--mainTransition);
-}
-.project:hover {
-  box-shadow: var(--darkShadow);
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.img-container {
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(245, 229, 27, 0.08);
+}
+
+.imgContainer {
   position: relative;
-  background: var(--primaryColor);
-  transition: var(--mainTransition);
+  overflow: hidden;
+  background: #141414;
+  aspect-ratio: 16 / 9;
 }
+
 .img {
-  transition: var(--mainTransition);
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
-.img-container:hover .img {
-  opacity: 0.3;
+
+.imgContainer:hover .img {
+  transform: scale(1.05);
+  opacity: 0.45;
 }
 
 .link {
@@ -25,55 +36,35 @@
   transform: translate(-50%, -50%);
   opacity: 0;
   text-transform: uppercase;
-  letter-spacing: var(--mainSpacing);
-  color: var(--mainWhite);
-  border: 2px solid var(--mainWhite);
-  padding: 0.5rem 0.7rem;
+  letter-spacing: 3px;
+  font-size: 0.75rem;
+  color: #f5e51b;
+  border: 2px solid #f5e51b;
+  padding: 0.6rem 1.2rem;
   display: inline-block;
-  transition: var(--mainTransition);
-  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
 }
+
 .link:hover {
-  background: var(--mainWhite);
-  color: var(--primaryColor);
+  background: #f5e51b;
+  color: #111;
 }
-.img-container:hover .link {
+
+.imgContainer:hover .link {
   opacity: 1;
 }
 
 .footer {
-  padding: 1rem;
-  text-align: left;
-  background-color: var(--darkGrey);
+  padding: 1.1rem 1.25rem;
+  background: #1a1a1a;
+  border-top: 2px solid rgba(245, 229, 27, 0.15);
 }
+
 .footer h3 {
-  color: #000;
-  text-transform: capitalize;
+  color: #e0e0e0;
+  font-size: 1rem;
   margin-bottom: 0;
+  letter-spacing: 1px;
 }
-/* .info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  text-transform: uppercase;
-  align-items: center;
-  margin-top: 0.5rem;
-}
-.info h6,
-.info h4 {
-  margin-bottom: 0;
-}
-.country {
-  text-transform: capitalize;
-  color: var(--primaryColor);
-  display: flex;
-  align-items: center;
-}
-.icon {
-  margin-right: 0.4rem;
-}
-.details {
-  color: var(--darkGrey);
-  text-transform: uppercase;
-  text-align: right;
-} */

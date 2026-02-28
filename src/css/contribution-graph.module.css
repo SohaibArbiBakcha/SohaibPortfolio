@@ -1,0 +1,127 @@
+.section {
+  background: #111;
+  padding: 4rem 0 5rem;
+  border-top: 1px solid rgba(245, 229, 27, 0.06);
+}
+
+/* ── Header ── */
+.header {
+  width: min(92vw, 1000px);
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.label {
+  font-family: "Fira Code", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #f5e51b;
+}
+
+.total {
+  font-family: "Fira Code", monospace;
+  font-size: 0.78rem;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+/* ── Wrapper ── */
+.wrapper {
+  width: min(92vw, 1000px);
+  margin: 0 auto;
+  background: #161616;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem 1rem;
+  overflow-x: auto;
+}
+
+/* ── Month labels ── */
+.months {
+  display: grid;
+  gap: 2px;
+  margin-left: 28px;
+  margin-bottom: 4px;
+}
+
+.monthLabel {
+  font-family: "Fira Code", monospace;
+  font-size: 0.65rem;
+  color: #555;
+  white-space: nowrap;
+}
+
+/* ── Body: day labels + grid ── */
+.body {
+  display: flex;
+  gap: 4px;
+  align-items: start;
+}
+
+.dayLabels {
+  display: grid;
+  grid-template-rows: 13px 13px 13px;
+  row-gap: 11px;
+  padding-top: 2px;
+}
+
+.dayLabels span {
+  font-family: "Fira Code", monospace;
+  font-size: 0.6rem;
+  color: #444;
+  line-height: 13px;
+  width: 24px;
+  text-align: right;
+}
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-rows: repeat(7, 13px);
+  gap: 2px;
+}
+
+/* ── Cell ── */
+.cell {
+  width: 13px;
+  height: 13px;
+  border-radius: 2px;
+}
+
+/* Contribution levels — yellow theme */
+.l0 {
+  background: #1a1a1a;
+}
+.l1 {
+  background: rgba(245, 229, 27, 0.18);
+}
+.l2 {
+  background: rgba(245, 229, 27, 0.38);
+}
+.l3 {
+  background: rgba(245, 229, 27, 0.65);
+}
+.l4 {
+  background: #f5e51b;
+}
+
+/* ── Legend ── */
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  justify-content: flex-end;
+  margin-top: 0.75rem;
+}
+
+.legendLabel {
+  font-family: "Fira Code", monospace;
+  font-size: 0.6rem;
+  color: #444;
+  margin: 0 4px;
+}

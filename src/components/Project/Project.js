@@ -11,7 +11,13 @@ const Project = ({ project }) => {
     <article className={styles.project}>
       <div className={styles.imgContainer}>
         <Images fluid={mainImage} className={styles.img} alt={projectName} />
-        <AniLink swipe className={styles.link} to={`/projects${slug}`}>
+        <AniLink
+          cover
+          bg="#111"
+          direction="right"
+          className={styles.link}
+          to={`/projects${slug}`}
+        >
           details
         </AniLink>
       </div>

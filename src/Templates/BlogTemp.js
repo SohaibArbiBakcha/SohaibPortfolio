@@ -9,13 +9,14 @@ import SEO from "../components/SEO"
 
 const BlogTemp = ({ data }) => {
   const { title, published, text } = data.post
-  const images = text.references
   const options = {
     renderNode: {
       "embedded-asset-block": node => {
+        const asset = node.data.target
+        if (!asset || !asset.fluid) return null
         return (
           <div className={styles.imgContainer}>
-            <Image fluid={images[0].fluid} className={styles.img} alt={title} />
+            <Image fluid={asset.fluid} className={styles.img} alt={title} />
           </div>
         )
       },
@@ -27,12 +28,22 @@ const BlogTemp = ({ data }) => {
       <SEO title={title} />
       <section className={styles.blog}>
         <div className={styles.center}>
+          <div className={styles.meta}>
+            <span className={styles.date}>📅 {published}</span>
+          </div>
           <h1>{title}</h1>
-          <h4> published at : {published}</h4>
           <article>{renderRichText(text, options)}</article>
-          <AniLink swipe to="/blog" className="btn-primary">
-            All post
-          </AniLink>
+          <div className={styles.backRow}>
+            <AniLink
+              cover
+              bg="#111"
+              direction="right"
+              to="/blog"
+              className="btn-primary"
+            >
+              ← All Posts
+            </AniLink>
+          </div>
         </div>
       </section>
     </Layout>
@@ -43,13 +54,13 @@ export const query = graphql`
   query getPost($slug: String) {
     post: contentfulPost(slug: { eq: $slug }) {
       title
-      published(formatString: "MMMM Do , YYYY")
+      published(formatString: "MMMM Do, YYYY")
       text {
         raw
         references {
           ... on ContentfulAsset {
             fluid {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid
             }
           }
         }
