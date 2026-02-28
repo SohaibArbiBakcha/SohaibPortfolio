@@ -30,7 +30,13 @@ const ProjectTemp = ({ data }) => {
           <h2>{projectName}</h2>
           <p className={styles.desc}>{description}</p>
         </div>
-        <AniLink swipe to="/project" className="btn-primary">
+        <AniLink
+          cover
+          bg="#111"
+          direction="right"
+          to="/project"
+          className="btn-primary"
+        >
           Back to projects
         </AniLink>
       </section>
@@ -47,11 +53,8 @@ export const query = graphql`
       }
       projectImages {
         fluid {
-          ...GatsbyContentfulFluid_tracedSVG
+          ...GatsbyContentfulFluid
         }
-      }
-      createBy {
-        test
       }
     }
   }

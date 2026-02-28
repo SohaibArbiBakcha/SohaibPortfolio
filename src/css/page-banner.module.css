@@ -1,0 +1,97 @@
+.banner {
+  position: relative;
+  min-height: 38vh;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(245, 229, 27, 0.1);
+}
+
+/* Subtle CSS grid pattern */
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      rgba(245, 229, 27, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(245, 229, 27, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: gridDrift 20s linear infinite;
+}
+
+@keyframes gridDrift {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(60px, 60px);
+  }
+}
+
+/* Radial glow */
+.banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 70% 60% at 50% 50%,
+    rgba(245, 229, 27, 0.04) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.label {
+  display: block;
+  font-family: "Fira Code", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #f5e51b;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: #e8e8e8;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.bracket {
+  color: #f5e51b;
+  font-weight: 300;
+}
+
+.line {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f5e51b, transparent);
+  margin: 0 auto;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    width: 40px;
+  }
+  50% {
+    opacity: 1;
+    width: 80px;
+  }
+}

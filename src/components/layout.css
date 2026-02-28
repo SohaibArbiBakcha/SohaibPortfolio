@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Poppins");
 
 :root {
-  --primaryColor: #a3a3a3;
-  --mainWhite: #fff;
-  --offWhite: #f7f7f7;
-  --mainBlack: #222;
-  --mainGrey: #ececec;
-  --darkGrey: #afafaf;
+  --primaryColor: #f5e51b;
+  --mainWhite: #eee;
+  --offWhite: #ccc;
+  --mainBlack: #111;
+  --mainGrey: #1a1a1a;
+  --darkGrey: #888;
   --turbo: #f5e51b;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 4px;
@@ -22,8 +22,8 @@
 
 body {
   font-family: "Lato", sans-serif;
-  color: var(--mainBlack);
-  background: var(--mainWhite);
+  color: var(--mainWhite);
+  background: var(--mainBlack);
   line-height: 1.4;
   font-size: 1rem;
 }
@@ -73,13 +73,13 @@ a {
   color: var(--mainBlack);
 }
 .btn-primary {
-  background: var(--primaryColor);
-  color: var(--mainWhite);
+  background: transparent;
+  color: var(--primaryColor);
   border: 2px solid var(--primaryColor);
 }
 .btn-primary:hover {
-  background: transparent;
-  color: var(--primaryColor);
+  background: var(--primaryColor);
+  color: #111;
 }
 /* .gatsby-image-wrapper {
   max-height: 600px;

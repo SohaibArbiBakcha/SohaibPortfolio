@@ -5,7 +5,7 @@ import styles from "../css/workin.module.css"
 const working = () => {
   return (
     <div>
-      <img src={img} alt="facking pic" className={styles.displayed} />
+      <img src={img} alt="work in progress" className={styles.displayed} />
     </div>
   )
 }

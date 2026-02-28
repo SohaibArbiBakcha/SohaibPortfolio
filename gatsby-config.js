@@ -6,21 +6,26 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
+// Warn if Contentful env vars are missing. Do NOT log actual tokens.
+if (!process.env.CONTENTFUL_SPACE_ID || !process.env.CONTENTFUL_ACCESS_TOKEN) {
+  console.warn(
+    "Warning: CONTENTFUL_SPACE_ID or CONTENTFUL_ACCESS_TOKEN not set. Contentful source plugin will fail if these are missing."
+  )
+}
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Sohaib portfolio",
-    description: `
-            Sohaib Arbi Bakcha is a junior Developer, he has ${
-              new Date().getFullYear() - 1995
-            } Years Old, He lives in Morocco.
-            He Start IT development in 2017 and now trying to develop his skills
-            by self-learning and freelancing
-          `,
-    author: "@SohaibArbiBakcha",
+    title: "Sohaib Arbi Bakcha",
+    siteTitle: "Sohaib Arbi Bakcha | Full-Stack Developer & ERP Architect",
+    description:
+      "Full-Stack Developer & ERP Solutions Architect based in Morocco. Building MERN stack apps, Odoo/Sage ERP systems, and IoT integrations at ATNER · ATLAS ENERGIE.",
+    author: "Sohaib Arbi Bakcha",
     twitterUsername: "@sohaibelarabiba",
-    image: "profile.jpg",
-    siteUrl: "https://www.sohaibportfolio.gq/",
+    image: "/profile.jpg",
+    siteUrl: "https://www.sohaibportfolio.gq",
+    keywords:
+      "Sohaib Arbi Bakcha, Full-Stack Developer, ERP Developer, Odoo, Sage ERP, React, Node.js, MongoDB, MERN, Morocco, IoT, Raspberry Pi, ESP32, Traccar",
+    locale: "en_US",
   },
   plugins: [
     {
@@ -33,10 +38,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        accessToken:
-          process.env.CONTENTFUL_ACCESS_TOKEN ||
-          "xy0kICxbxX0FMhlOTnCl6WKNOgf7OkQqE1xmpQP16xA",
-        spaceId: process.env.CONTENTFUL_SPACE_ID || "58ro2x7srquj",
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
         // Learn about environment variables: https://gatsby.dev/env-vars
       },
     },
@@ -55,28 +58,20 @@ module.exports = {
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
-    {
+    process.env.GOOGLE_ANALYTICS_TRACKING_ID && {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // The property ID; the tracking code won't be generated without it
         trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
         head: false,
-        // Setting this parameter is optional
         anonymize: true,
-        // Setting this parameter is also optional
         respectDNT: true,
-        // Avoids sending pageview hits from custom paths
         exclude: ["/preview/**", "/do-not-track/me/too/"],
-        // Delays sending pageview hits on route update (in milliseconds)
         pageTransitionDelay: 0,
-        // Defers execution of google analytics script after page load
         defer: false,
-        // Any additional optional fields
         sampleRate: 5,
         siteSpeedSampleRate: 10,
         cookieDomain: "sohaibportfolio.gq",
       },
     },
-  ],
+  ].filter(Boolean),
 }

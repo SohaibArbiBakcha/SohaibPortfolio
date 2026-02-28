@@ -1,0 +1,276 @@
+.page {
+  background: #111;
+  min-height: 100vh;
+  padding: 4rem 0 6rem;
+}
+
+.center {
+  width: min(90vw, 860px);
+  margin: 0 auto;
+}
+
+/* ── Header ── */
+.header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(245, 229, 27, 0.12);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.label {
+  font-family: "Fira Code", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  color: #f5e51b;
+  text-transform: uppercase;
+}
+
+.updated {
+  font-family: "Fira Code", monospace;
+  font-size: 0.7rem;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+.name {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: #e8e8e8;
+  letter-spacing: 2px;
+  margin-bottom: 0.75rem;
+  word-break: break-word;
+}
+
+.description {
+  color: #888;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+/* ── Stats ── */
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.lang {
+  font-family: "Fira Code", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  background: rgba(245, 229, 27, 0.1);
+  border: 1px solid rgba(245, 229, 27, 0.3);
+  color: #f5e51b;
+  padding: 0.2rem 0.65rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: #666;
+  font-family: "Fira Code", monospace;
+}
+
+/* ── Topics ── */
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.topic {
+  font-family: "Fira Code", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 1px;
+  color: #888;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+}
+
+/* ── Action buttons ── */
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.btnGh,
+.btnLive {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.65rem 1.2rem;
+  border-radius: 3px;
+  transition: background 0.25s, color 0.25s;
+  text-decoration: none;
+}
+
+.btnGh {
+  background: transparent;
+  border: 2px solid #f5e51b;
+  color: #f5e51b;
+}
+.btnGh:hover {
+  background: #f5e51b;
+  color: #111;
+}
+
+.btnLive {
+  background: transparent;
+  border: 2px solid #555;
+  color: #888;
+}
+.btnLive:hover {
+  border-color: #f5e51b;
+  color: #f5e51b;
+}
+
+/* ── README prose ── */
+.readme {
+  background: #161616;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  line-height: 1.85;
+  color: #bbb;
+  overflow-x: auto;
+}
+
+.readme h1,
+.readme h2,
+.readme h3,
+.readme h4 {
+  color: #e0e0e0;
+  margin: 1.75rem 0 0.75rem;
+  letter-spacing: 1px;
+}
+
+.readme h2 {
+  border-left: 3px solid #f5e51b;
+  padding-left: 0.75rem;
+}
+
+.readme p {
+  margin-bottom: 1rem;
+}
+
+.readme a {
+  color: #f5e51b;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.readme code {
+  font-family: "Fira Code", monospace;
+  font-size: 0.85em;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  color: #f5e51b;
+}
+
+.readme pre {
+  background: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1.25rem 0;
+}
+
+.readme pre code {
+  background: none;
+  padding: 0;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.readme blockquote {
+  border-left: 3px solid #f5e51b;
+  margin: 1.25rem 0;
+  padding: 0.5rem 1rem;
+  color: #777;
+  font-style: italic;
+  background: rgba(245, 229, 27, 0.03);
+}
+
+.readme img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+.readme ul,
+.readme ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.readme li {
+  margin-bottom: 0.4rem;
+}
+
+.readme hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin: 2rem 0;
+}
+
+.readme table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.9rem;
+}
+
+.readme th,
+.readme td {
+  padding: 0.6rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: left;
+}
+
+.readme th {
+  background: rgba(245, 229, 27, 0.06);
+  color: #e0e0e0;
+  font-family: "Fira Code", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* ── Empty / back ── */
+.noReadme {
+  color: #555;
+  font-family: "Fira Code", monospace;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  border: 1px dashed rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+}
+
+.backRow {
+  text-align: center;
+}

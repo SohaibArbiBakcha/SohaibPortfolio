@@ -17,7 +17,7 @@ const getProject = graphql`
           slug
           projectImages {
             fluid {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid
             }
           }
         }
