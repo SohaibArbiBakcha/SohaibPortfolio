@@ -24,7 +24,6 @@
   animation: drift calc(12s + var(--i) * 1.7s) ease-in-out infinite alternate;
   /* Distribute icons across the footer */
   left: calc((var(--i) * 7.5%) + 2%);
-  top: calc(10% + (var(--i) * 13% % 80%));
 }
 
 /* Each icon gets a slightly different float path */
