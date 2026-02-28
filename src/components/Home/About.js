@@ -35,19 +35,22 @@ const About = ({ className }) => {
           </div>
         </article>
         <article className={styles.aboutInfo}>
-          <h3 className={styles.role}>
-            Full-Stack Developer &amp; ERP Solutions Architect
-          </h3>
+          <div className={styles.roleRow}>
+            <h3 className={styles.role}>
+              Backend Developer &amp; Frontend Developer
+            </h3>
+            <span className={styles.openToWork}>Open to Work</span>
+          </div>
           <p className={styles.company}>
             📍 Morocco &nbsp;·&nbsp; ATNER (ATLAS ENERGIE)
           </p>
           <p className={styles.bio}>
-            I specialize in building robust enterprise solutions that bridge
-            modern web technologies with traditional ERP systems. Currently
-            developing cutting-edge MERN stack applications while managing and
-            customizing Odoo &amp; Sage ERP platforms — including IoT
-            integrations, GPS tracking systems, facial recognition access
-            control, and automated PowerShell workflows.
+            Full-Stack Developer with solid experience building end-to-end web
+            applications — from REST APIs and server-side logic with Node.js
+            &amp; Express, to modern reactive UIs with React. I also manage and
+            customize ERP systems (Odoo, Sage) and build IoT integrations, GPS
+            tracking systems, and automation workflows. Currently open to new
+            opportunities.
           </p>
           <div className={styles.skillsGrid}>
             {skills.map((s, i) => (
