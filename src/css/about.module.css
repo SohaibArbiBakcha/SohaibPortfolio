@@ -37,6 +37,13 @@
   border: 1px solid rgba(245, 229, 27, 0.12);
 }
 
+.imgContainer img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 .aboutInfo {
   margin-top: 2rem;
 }

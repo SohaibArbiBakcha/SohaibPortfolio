@@ -43,8 +43,6 @@ module.exports = {
         // Learn about environment variables: https://gatsby.dev/env-vars
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-playground`,

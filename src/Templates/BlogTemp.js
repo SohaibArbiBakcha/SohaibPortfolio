@@ -4,7 +4,6 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
-import Image from "gatsby-image"
 import SEO from "../components/SEO"
 
 const BlogTemp = ({ data }) => {
@@ -13,10 +12,11 @@ const BlogTemp = ({ data }) => {
     renderNode: {
       "embedded-asset-block": node => {
         const asset = node.data.target
-        if (!asset || !asset.fluid) return null
+        const url = asset && asset.file && asset.file.url
+        if (!url) return null
         return (
           <div className={styles.imgContainer}>
-            <Image fluid={asset.fluid} className={styles.img} alt={title} />
+            <img src={`https:${url}`} className={styles.img} alt={title} />
           </div>
         )
       },
@@ -59,8 +59,10 @@ export const query = graphql`
         raw
         references {
           ... on ContentfulAsset {
-            fluid {
-              ...GatsbyContentfulFluid
+            contentful_id
+            __typename
+            file {
+              url
             }
           }
         }

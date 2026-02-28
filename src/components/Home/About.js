@@ -3,20 +3,7 @@ import Title from "../Title"
 import styled from "styled-components"
 import styles from "../../css/about.module.css"
 import TimeLine from "./TimeLine"
-import Img from "gatsby-image"
-import { graphql, useStaticQuery } from "gatsby"
-
-const myQuery = graphql`
-  {
-    fluid: file(relativePath: { eq: "profile.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
-      }
-    }
-  }
-`
+import profileImg from "../../images/profile.jpg"
 
 const skills = [
   "React",
@@ -38,14 +25,13 @@ const skills = [
 ]
 
 const About = ({ className }) => {
-  const data = useStaticQuery(myQuery)
   return (
     <section className={styles.about}>
       <Title titel="<About" subtitel="Me/>" />
       <div className={styles.aboutCenter}>
         <article className={styles.aboutImg}>
           <div className={styles.imgContainer}>
-            <Img fluid={data.fluid.childImageSharp.fluid} />
+            <img src={profileImg} alt="Sohaib Arbi Bakcha" />
           </div>
         </article>
         <article className={styles.aboutInfo}>

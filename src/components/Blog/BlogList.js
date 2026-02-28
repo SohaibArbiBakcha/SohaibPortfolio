@@ -13,8 +13,8 @@ const getPost = graphql`
           slug
           published(formatString: "MMMM Do, yyyy")
           image {
-            fluid {
-              ...GatsbyContentfulFluid
+            file {
+              url
             }
           }
         }
