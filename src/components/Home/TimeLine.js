@@ -173,7 +173,7 @@ const TimeLine = () => {
 
   return (
     <Wrapper ref={wrapperRef}>
-      <Title titel="<my" subtitel="experience/>" />
+      <Title label="// career path" title="My Experience" />
       <Track>
         <Line ref={lineRef} />
         {entries.map((entry, i) => (

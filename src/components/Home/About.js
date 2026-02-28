@@ -27,7 +27,7 @@ const skills = [
 const About = ({ className }) => {
   return (
     <section className={styles.about}>
-      <Title titel="<About" subtitel="Me/>" />
+      <Title label="// who i am" title="About Me" />
       <div className={styles.aboutCenter}>
         <article className={styles.aboutImg}>
           <div className={styles.imgContainer}>
