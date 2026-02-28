@@ -22,7 +22,7 @@ module.exports = {
     author: "Sohaib Arbi Bakcha",
     twitterUsername: "@sohaibelarabiba",
     image: "/profile.jpg",
-    siteUrl: "https://www.sohaibportfolio.gq",
+    siteUrl: "https://sohaibbakcha.netlify.app",
     keywords:
       "Sohaib Arbi Bakcha, Full-Stack Developer, ERP Developer, Odoo, Sage ERP, React, Node.js, MongoDB, MERN, Morocco, IoT, Raspberry Pi, ESP32, Traccar",
     locale: "en_US",
@@ -51,8 +51,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://www.sohaibportfolio.gq",
-        sitemap: "https://www.sohaibportfolio.gq/sitemap.xml",
+        host: "https://sohaibbakcha.netlify.app",
+        sitemap: "https://sohaibbakcha.netlify.app/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
@@ -68,7 +68,7 @@ module.exports = {
         defer: false,
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: "sohaibportfolio.gq",
+        cookieDomain: "sohaibbakcha.netlify.app",
       },
     },
   ].filter(Boolean),
