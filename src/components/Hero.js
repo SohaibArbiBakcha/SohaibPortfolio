@@ -1,7 +1,6 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import Typed from "react-typed"
 import Particles from "react-particles-js"
 import socialIcon from "../constants/socialIcon"
 
@@ -71,16 +70,69 @@ const Name = styled.h1`
 `
 
 const RoleWrapper = styled.div`
-  color: #aaa;
-  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-  opacity: 0;
-  animation: ${fadeUp} 0.7s ease 0.8s forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.2rem;
+  margin-bottom: 1.75rem;
+`
 
-  .typed-cursor {
+const RoleChip = styled.span`
+  font-size: clamp(0.78rem, 2vw, 0.95rem);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #bbb;
+  opacity: 0;
+  animation: ${fadeUp} 0.6s ease ${props => props.delay || "0.8s"} forwards;
+
+  strong {
     color: var(--turbo);
+    font-weight: 600;
+  }
+`
+
+const RoleSep = styled.span`
+  color: rgba(245, 229, 27, 0.3);
+  font-size: 1.2rem;
+  opacity: 0;
+  animation: ${fadeUp} 0.6s ease 1s forwards;
+`
+
+const OpenBadge = styled.span`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  color: #22c55e;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  font-family: "Fira Code", monospace;
+  opacity: 0;
+  animation: ${fadeUp} 0.6s ease 1.15s forwards;
+
+  &::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #22c55e;
+    animation: heroBlink 1.4s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes heroBlink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.2;
+    }
   }
 `
 
@@ -195,17 +247,14 @@ const Hero = () => (
       <Greeting>Hello, I&apos;m</Greeting>
       <Name>Sohaib Arbi Bakcha</Name>
       <RoleWrapper>
-        <Typed
-          strings={[
-            "Front End Developer",
-            "Back End Developer",
-            "Open To Work",
-          ]}
-          typeSpeed={40}
-          backSpeed={60}
-          stopDelay={5000}
-          loop
-        />
+        <RoleChip delay="0.8s">
+          <strong>Backend</strong> Developer
+        </RoleChip>
+        <RoleSep>/</RoleSep>
+        <RoleChip delay="0.95s">
+          <strong>Frontend</strong> Developer
+        </RoleChip>
+        <OpenBadge>Open to Work</OpenBadge>
       </RoleWrapper>
       <Divider />
       <Socials>
